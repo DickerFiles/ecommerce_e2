@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Model;
+
+package models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,30 +16,22 @@ import java.math.BigDecimal;
  * @author luisb
  */
 @Entity
-@Table (name = "order_items")
-public class OrderItem {
+@Table (name = "cart_items")
+public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     
-    @Column
+    @Column(nullable = false)
     private int quantity;
-    
-    @Column
-    private BigDecimal price;
     
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
     
     @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
-    
-    @ManyToOne
-    @JoinColumn(name = "address")
-    private Address address;
-    
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
     
     
 }
