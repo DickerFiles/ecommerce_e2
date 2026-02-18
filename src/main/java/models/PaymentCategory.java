@@ -1,4 +1,3 @@
-
 package models;
 
 /**
@@ -6,6 +5,6 @@ package models;
  * @author luisb
  */
 public enum PaymentCategory {
-    CREDIT, 
+    CREDIT,
     DEBIT
 }
