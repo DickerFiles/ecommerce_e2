@@ -3,3 +3,4 @@
 Dockerfile
 .dockerignore
 assets/
+README.md
